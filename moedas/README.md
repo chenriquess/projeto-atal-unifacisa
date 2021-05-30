@@ -44,8 +44,8 @@ moedas estão inicialmente com o valor voltado para cima (indicado pelo caracter
 ## Saída
 
 A função deve retornar o menor número de operações de virar moedas a serem
-realizadas, representada por um número inteiro, ou a string "IMPOSSIVEL", caso
-não seja possível deixar todas as moedas com o valor voltado para cima.
+realizadas, representada por um número inteiro, ou o valor -1, caso não seja
+possível deixar todas as moedas com o valor voltado para cima.
 
 ## Limites
 
@@ -63,7 +63,7 @@ D | K | Saída
 --- | --- | ---
 CCCVCVVC | 3 | 3
 VVVVV | 4 | 0
-CVCVC | 4 | IMPOSSIVEL
+CVCVC | 4 | -1
 
 ### Explicação
 
