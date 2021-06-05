@@ -55,6 +55,9 @@ direção de cada movimento a ser feito por Joãozinho -- Norte (N), SUL (S), Le
 (L) ou Oeste (O) -- desde a posição (0, 0) até chegar em Aninha, ou a palavra
 _IMPOSSIVEL_, caso não seja possível que Joãozinho chegue até Aninha.
 
+**Nota:** é possível que exista mais de uma rota possível. Qualquer rota correta
+retornada será considerada válida.
+
 ## Exemplos
 
 | M   | N   | L   | C   | B                                                                                      | Saída      |
