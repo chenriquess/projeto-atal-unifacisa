@@ -51,6 +51,15 @@ alimentos na lista não importa.
 
 ### Explicação
 
+Em todos os três casos, nós temos os seguintes pratos
+
+| Nome | Valor | Experiência Gastronômica |
+| --- | --- | --- |
+| Caviar | 100 | 20 |
+| Pizza | 20 | 5 |
+| Bode | 11 | 10 |
+| Lagosta | 90 | 15 |
+
 No primeiro caso, a melhor experiência gastronômica que Joãzinho poderia ter é
 igual a 20, escolhendo apenas o primeiro prato, que é de Caviar, e tendo um
 custo total de 100.
