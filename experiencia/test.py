@@ -15,10 +15,10 @@ class TestEncontroMarcado(TestCase):
         self.assertIn("Bode", melhor_experiencia(110, self.C))
         self.assertIn("Lagosta", melhor_experiencia(110, self.C))
 
-    def test_caviar_pizza(self):
+    def test_caviar_bode(self):
         self.assertEqual(len(melhor_experiencia(120, self.C)), 2)
         self.assertIn("Caviar", melhor_experiencia(120, self.C))
-        self.assertIn("Pizza", melhor_experiencia(120, self.C))
+        self.assertIn("Bode", melhor_experiencia(120, self.C))
 
 
 if __name__ == "__main__":
