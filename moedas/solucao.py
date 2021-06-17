@@ -1,22 +1,34 @@
 def minimo_operacoes(D: str, K: int) -> int:
-    """Função que calcula o mínimo de operações a serem realizadas de forma a
-    deixar todas as moedas com o valor voltado para cima.
+    contador = 0
+    moedas = list(D) # String eh imutavel, portanto lista
 
-    Parâmetros
-    ----------
-    D : str
-        Estado inicial das moedas, onde V indica que uma moeda está com o valor
-        voltado para cima, e C indica que uma moeda está com o valor voltado
-        para baixo.
+    # Enquanto houver moedas com valor para baixo
+    while 'C' in moedas:
+    
+        # Foram estabelecidas 2 condicoes para casos impossiveis
+        # Condicao 1:
+        # Caso tenha apenas uma moeda, nao eh possivel, pois no minimo 2 serao viradas simultaneamente
+        # Foi possivel notar que em algum momento alterando as moedas, isso ocorre nos casos impossiveis
+        # Condicao 2:
+        # No caso de virar todas as moedas ao mesmo tempo, mas nem todas sejam C, eh impossivel
+        if moedas.count('C') == 1 or (len(moedas) == K and moedas.count('C') < len(moedas)):
+            return -1
 
-    K : int
-        Número de moedas consecutivas que são viradas pela máquina.
+        # IndiceC = Indice da primeira moeda C encontrada ou o ultimo indice - K
+        # Assim, eh possivel alterar K moedas em volta de C
+        index = len(moedas) - K if moedas.index('C') + K > len(moedas) else moedas.index('C')
 
-    Retorna
-    -------
-    O menor número de operações a serem realizadas pela máquina, ou -1, caso
-    não seja possível deixar todas as moedas com o valor voltado para cima.
-    """
+        # A partir do indiceC, vira K moedas
+        y = 0
+        while y < K and (index + y) < len(moedas):
+            moedas[index + y] = 'V' if moedas[index + y] == 'C' else 'C'
+            y = y + 1
+        
+        contador = contador + 1
+
+    return contador
+    
+
     pass
 
 if __name__ == "__main__":
